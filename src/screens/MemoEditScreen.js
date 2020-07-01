@@ -35,7 +35,6 @@ class MemoEditScreen extends React.Component {
       });
   }
 
-class MemoEditScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
