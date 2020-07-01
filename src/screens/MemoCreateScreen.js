@@ -33,9 +33,7 @@ class MemoCreateScreen extends React.Component {
           value={this.state.body}
           onChangeText={(text) => { this.setState({ body: text }); }}
         />
-        <CircleButton onPress={this.handlePress.bind(this)}>
-          {'\uf00c'}
-        </CircleButton>
+        <CircleButton name="plus" onPress={this.handlePress.bind(this)} />
       </View>
     );
   }
