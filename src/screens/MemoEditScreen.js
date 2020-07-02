@@ -35,9 +35,9 @@ class MemoEditScreen extends React.Component {
           key: this.state.key,
           createdOn: newDate,
         });
-        navigation.goBack();      })
-      .catch((error) => {
-        console.log(error);
+        navigation.goBack();
+      })
+      .catch(() => {
       });
   }
 
