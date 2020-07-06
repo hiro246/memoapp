@@ -25,14 +25,6 @@ const config = {
   measurementId:     ENV.FIREBASE_MEASUREMENT_ID,
 };
 firebase.initializeApp(config);
-// firebase.firestore.setLogLevel('debug');
-
-const db = firebase.firestore();
-db.settings({
-  timestampsInSnapshots: true,
-});
-export { db };
-
 
 const App = createStackNavigator({
   Login:      { screen: LoginScreen },

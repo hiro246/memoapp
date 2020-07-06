@@ -2,14 +2,13 @@ import React from 'react';
 import { StyleSheet, KeyboardAvoidingView, TextInput } from 'react-native';
 
 import firebase from 'firebase';
-import { db } from '../../App';
 
 import CircleButton from '../elements/CircleButton';
 
 class MemoEditScreen extends React.Component {
   state = {
     body: '',
-    key: params.memo.key,
+    key: '',
   }
 
   componentDidMount() {
@@ -21,6 +20,8 @@ class MemoEditScreen extends React.Component {
   }
 
   handlePress() {
+    const db = firebase.firestore();
+    db.settings({ timestampsInSnapshots: true });
     const { currentUser } = firebase.auth();
     // returnMemo に渡すので new Date() ではなくて firestore の Timestamp 型を直接使う
     const newDate = firebase.firestore.Timestamp.now();
