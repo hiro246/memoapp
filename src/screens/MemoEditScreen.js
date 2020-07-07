@@ -48,7 +48,6 @@ class MemoEditScreen extends React.Component {
   render() {
     return (
       <KeyboardAvoidingView style={styles.container} behavior="height" keyboardVerticalOffset={80}>
-        <TextInput style={styles.memoEditInput} multiline value="Hi" />
         <TextInput
           style={styles.memoEditInput}
           multiline
@@ -57,7 +56,7 @@ class MemoEditScreen extends React.Component {
           underlineColorAndroid="transparent"
           textAlignVertical="top"
         />
-        <CircleButton name="check" color="white" onPress={this.handlePress.bind(this)} />
+        <CircleButton name="check" onPress={this.handlePress.bind(this)} />
       </KeyboardAvoidingView>
     );
   }

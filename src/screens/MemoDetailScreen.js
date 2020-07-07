@@ -25,6 +25,7 @@ class MemoDetailScreen extends React.Component {
   }
 
   render() {
+    const { memo } = this.state;
     return (
       <View style={styles.container}>
         <View>
@@ -81,6 +82,10 @@ const styles = StyleSheet.create({
     paddingBottom: 20,
     backgroundColor: '#fff',
     flex: 1,
+  },
+  memoBody: {
+    lineHeight: 22,
+    fontSize: 15,
   },
   editButton: {
     top: 68,

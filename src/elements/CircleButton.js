@@ -1,13 +1,14 @@
 import React from 'react';
 import * as Font from 'expo-font';
+
 import { createIconSet } from '@expo/vector-icons';
 import { StyleSheet, View, TouchableHighlight } from 'react-native';
 import fontAwsome from '../../assets/fonts/fa-solid-900.ttf';
 
 const CustomIcon = createIconSet({
+  check: '\uf00c',
   pencil: '\uf303',
   plus: '\uf067',
-  check: '\uf00c',
 }, 'FontAwesome');
 
 class CircleButton extends React.Component {
@@ -69,7 +70,6 @@ const styles = StyleSheet.create({
     elevation: 4,
   },
   circleButtonTitle: {
-    fontFamily: 'FontAwesome',
     fontSize: 24,
     lineHeight: 24,
   },
